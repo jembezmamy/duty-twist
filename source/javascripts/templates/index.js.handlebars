@@ -14,7 +14,7 @@
   <tbody>
     {{#each rounds}}
       <tr>
-        <td>{{startsOn}}</td>
+        <td>{{localized-date startsOn}}</td>
         {{#each assignments}}
           <td>
             {{#link-to 'person.assignment' person this}}
