@@ -1,3 +1,3 @@
 DutyTwist.Router.map ->
-  @route "people", path: ":person_id/", ->
-    @route "assignments", path: ":round_number"
+  @route "person", path: ":person_id/", ->
+    @route "assignment", path: ":round_number"

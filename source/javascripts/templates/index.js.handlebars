@@ -3,7 +3,11 @@
     <tr>
       <td></td>
       {{#each}}
-        <td>{{name}}</td>
+        <td>
+          {{#link-to 'person' this}}
+            {{name}}
+          {{/link-to}}
+        </td>
       {{/each}}
     </tr>
   </thead>
@@ -13,7 +17,7 @@
         <td>{{startsOn}}</td>
         {{#each assignments}}
           <td>
-            {{#link-to 'people.assignments' person this}}
+            {{#link-to 'person.assignment' person this}}
               {{duty.name}}
             {{/link-to}}
           </td>
