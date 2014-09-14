@@ -12,6 +12,7 @@ class DutyTwist.Schedule
     
   _rounds: ~> []
   findRound: (number) ->
+    number = number * 1
     @_rounds[number] ||= DutyTwist.Round.create number: number, schedule: this
     
   people: ~> DutyTwist.Person.find()
