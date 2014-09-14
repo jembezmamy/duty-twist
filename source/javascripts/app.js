@@ -8,3 +8,4 @@
 //= require_tree ./routes
 
 DutyTwist = Ember.Application.create();
+// DutyTwist.Router.reopen({location: 'history'})

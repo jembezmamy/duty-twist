@@ -1,6 +1,7 @@
 //= require ./vendor/jquery.js
 //= require handlebars
 //= require ember
+//= require_tree ./vendor/
 //
 //= require ./app
 //

@@ -12,7 +12,11 @@
       <tr>
         <td>{{startsOn}}</td>
         {{#each assignments}}
-          <td>{{duty.name}}</td>
+          <td>
+            {{#link-to 'people.assignments' person this}}
+              {{duty.name}}
+            {{/link-to}}
+          </td>
         {{/each}}
       </tr>
     {{/each}}
