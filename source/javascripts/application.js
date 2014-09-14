@@ -5,3 +5,5 @@
 //= require ./app
 //
 //= require_self
+//
+//= require ./data

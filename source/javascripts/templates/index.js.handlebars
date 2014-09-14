@@ -1,0 +1,20 @@
+<table class="schedule">
+  <thead>
+    <tr>
+      <td></td>
+      {{#each}}
+        <td>{{name}}</td>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rounds}}
+      <tr>
+        <td>{{startsOn}}</td>
+        {{#each assignments}}
+          <td>{{duty.name}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

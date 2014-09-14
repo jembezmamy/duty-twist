@@ -41,6 +41,11 @@ GEM
       sass
     ember-source (1.7.0)
       handlebars-source (~> 1.0)
+    ember_script (0.0.5)
+      ember_script-source (>= 0.0.2)
+      execjs
+      tilt
+    ember_script-source (0.0.14)
     erubis (2.7.0)
     execjs (2.2.1)
     ffi (1.9.3)
@@ -81,6 +86,8 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
+    middleman-emberscript (1.0.0)
+      ember_script (= 0.0.5)
     middleman-sprockets (3.3.10)
       middleman-core (~> 3.3)
       sprockets (~> 2.12.1)
@@ -130,3 +137,4 @@ DEPENDENCIES
   ember-middleman (~> 0.0.5)
   ember-source
   middleman (~> 3.3.5)
+  middleman-emberscript
