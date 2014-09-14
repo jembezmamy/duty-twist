@@ -88,6 +88,8 @@ GEM
       tilt (~> 1.4.1, < 2.0)
     middleman-emberscript (1.0.0)
       ember_script (= 0.0.5)
+    middleman-gh-pages (0.0.3)
+      rake (> 0.9.3)
     middleman-sprockets (3.3.10)
       middleman-core (~> 3.3)
       sprockets (~> 2.12.1)
@@ -104,6 +106,7 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rake (10.3.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -138,3 +141,4 @@ DEPENDENCIES
   ember-source
   middleman (~> 3.3.5)
   middleman-emberscript
+  middleman-gh-pages

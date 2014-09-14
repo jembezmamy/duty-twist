@@ -5,3 +5,5 @@ gem 'ember-middleman', '~> 0.0.5'
 
 gem 'ember-source'
 gem 'middleman-emberscript'
+
+gem 'middleman-gh-pages'
