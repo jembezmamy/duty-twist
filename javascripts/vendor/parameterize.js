@@ -180,3 +180,4 @@ function url_slug(s, opt) {
 	
 	return opt.lowercase ? s.toLowerCase() : s;
 }
+;
