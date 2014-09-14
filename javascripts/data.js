@@ -1,9 +1,1 @@
-(function() {
-  DutyTwist.DATA = {
-    people: ["Ania", "Emilka", "Krzysiek", "Paweł"],
-    duties: ["Kuchnia", "Przedpokój", "Łazienka", "Śmieci"],
-    startDate: "2014-09-08",
-    interval: 7
-  };
-
-}).call(this);
+(function(){DutyTwist.DATA={people:["Ania","Emilka","Krzysiek","Pawe\u0142"],duties:["Kuchnia","Przedpok\xf3j","\u0141azienka","\u015amieci"],startDate:"2014-09-08",interval:7}}).call(this);
