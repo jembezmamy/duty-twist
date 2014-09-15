@@ -7,6 +7,9 @@ class DutyTwist.Round
     
   startsOn: ~>
     new Date(@startTime)
+  
+  endsOn: ~>
+    new Date(@startTime + @schedule.interval - 24 * 60 * 60 * 1000)
     
   isCurrent: ~>
     @schedule.currentRound == @number

@@ -1,16 +1,23 @@
-<nav>
-  {{#link-to "person.assignment" person previousAssignment}}
-    <
+<nav class="assignment-nav">
+  {{#link-to "person.assignment" person previousAssignment classNames="grey button icon-only"}}
+    <i class="previous icon">Previous</i>
   {{/link-to}}
-  {{#link-to "index"}}
-    index
+  {{#link-to "index"classNames="grey button icon-only"}}
+    <i class="index icon">Index</i>
   {{/link-to}}
-  {{localized-date round.startsOn}}
-  {{#link-to "person.assignment" person nextAssignment}}
-    >
+  <span class="text">
+    <strong>
+      {{person.name}}:
+    </strong>
+    {{localized-date round.startsOn}}
+    –
+    {{localized-date round.endsOn}}
+  </span>
+  {{#link-to "person.assignment" person nextAssignment classNames="grey button icon-only last"}}
+    <i class="next icon">Next</i>
   {{/link-to}}
 </nav>
-<div class="image">
-  <img {{bind-attr src=duty.imageUrl}} />
+<div class="assignment-image">
+  <img {{bind-attr src=duty.imageUrl alt=duty.name}} />
 </div>
-<h1>{{duty.name}}</h1>
+<h1 class="assignment-name">{{duty.name}}</h1>

@@ -7,3 +7,5 @@ gem 'ember-source'
 gem 'middleman-emberscript'
 
 gem 'middleman-gh-pages'
+
+gem 'middleman-autoprefixer'

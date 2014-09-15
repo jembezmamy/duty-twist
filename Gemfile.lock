@@ -7,6 +7,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    autoprefixer-rails (3.1.0.20140911)
+      execjs
     barber (0.4.2)
       ember-source
       execjs
@@ -74,6 +76,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.2.17, < 4.0)
       uglifier (~> 2.5)
+    middleman-autoprefixer (2.2.1)
+      autoprefixer-rails (~> 3.1.0)
+      middleman-core (>= 3.3.3)
     middleman-core (3.3.5)
       activesupport (~> 4.1.0)
       bundler (~> 1.1)
@@ -140,5 +145,6 @@ DEPENDENCIES
   ember-middleman (~> 0.0.5)
   ember-source
   middleman (~> 3.3.5)
+  middleman-autoprefixer
   middleman-emberscript
   middleman-gh-pages

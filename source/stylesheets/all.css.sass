@@ -11,11 +11,24 @@ $light-blue: #CCEDFF
 =light-shadow
   box-shadow: 0 1px 2px rgba(black, 0.2)
 
+$icons: (previous, index, next)
+i.icon
+  display: inline-block
+  width: 20px
+  height: 0
+  padding-top: 20px
+  overflow: hidden
+  background-image: image-url("icons.png")
+  @for $i from 1 through length($icons)
+    &.#{nth($icons, $i)}
+      background-position: -20px * ($i - 1) 0
+
 body
   background-color: $lightest-grey
   font-family: "Helvetica Neue", Arial, sans-serif
   font-weight: 200
   font-size: 14px
+  text-rendering: optimizeLegibility
   
 .wrapper
   max-width: 360px
@@ -26,7 +39,7 @@ body
   position: relative
   
 .button
-  border-radius: 3px
+  border-radius: 2px
   background-color: white
   color: black
   text-decoration: none
@@ -39,6 +52,15 @@ body
     background-color: $blue
     border-color: $blue
     color: white
+  &.grey
+    border: none
+    background-color: $grey
+    &:hover
+      background-color: $dark-grey
+  &.icon-only
+    padding: 3px
+    i.icon
+      display: block
   
 
 
@@ -77,4 +99,33 @@ table.schedule
         max-width: 40px
         max-height: 40px
         margin: 0
+        
+        
+.assignment-nav
+  margin: 0 10px 10px
+  height: 26px
+  line-height: 26px
+  a, .text
+    float: left
+    margin-right: 5px
+  a.last
+    float: right
+    margin: 0
+  .text
+    margin-left: 18px
+    color: $grey
+    strong
+      color: black
       
+.assignment-image
+  img
+    display: block
+    max-width: 100%
+
+h1.assignment-name
+  text-align: center
+  font-weight: 200
+  margin: 10px 0
+  color: $dark-grey
+  letter-spacing: 0.02em
+  

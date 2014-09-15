@@ -19,7 +19,7 @@
           <td {{bind-attr class="isLast"}}>
             {{#link-to 'person.assignment' person this}}
               {{#if duty.iconUrl}}
-                <img {{bind-attr src=duty.iconUrl}} />
+                <img {{bind-attr src=duty.iconUrl alt=duty.name}} />
               {{else}}
                 {{duty.name}}
               {{/if}}
