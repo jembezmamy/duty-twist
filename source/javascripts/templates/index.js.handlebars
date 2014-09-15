@@ -18,7 +18,11 @@
         {{#each assignments}}
           <td>
             {{#link-to 'person.assignment' person this}}
-              {{duty.name}}
+              {{#if duty.iconUrl}}
+                <img {{bind-attr src=duty.iconUrl}} />
+              {{else}}
+                {{duty.name}}
+              {{/if}}
             {{/link-to}}
           </td>
         {{/each}}

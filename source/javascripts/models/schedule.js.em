@@ -30,6 +30,9 @@ DutyTwist.Schedule.reopenClass
       interval: data.interval * 24 * 60 * 60 * 1000
     schedule.people = data.people.map (name, i) ->
       DutyTwist.Person.create name: name, offset: i, schedule: schedule
-    schedule.duties = data.duties.map (name) ->
-      DutyTwist.Duty.create name: name, schedule: schedule
+    schedule.duties = data.duties.map (params) ->
+      unless params instanceof Object
+        params = {name: params}
+      params.schedule = schedule
+      DutyTwist.Duty.create params
     schedule
