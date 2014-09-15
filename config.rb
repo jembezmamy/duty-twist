@@ -13,8 +13,10 @@ activate :emberscript
 # end
 
 set :css_dir, 'stylesheets'
+ignore /stylesheets\/(?!all).*\.css/
 
 set :js_dir, 'javascripts'
+ignore /javascripts\/(?!application).*\.js/
 
 set :images_dir, 'images'
 
