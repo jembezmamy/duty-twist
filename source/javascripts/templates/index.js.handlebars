@@ -3,20 +3,20 @@
     <tr>
       <td></td>
       {{#each}}
-        <td>
-          {{#link-to 'person' this}}
+        <th>
+          {{#link-to 'person' this classNames='button'}}
             {{name}}
           {{/link-to}}
-        </td>
+        </th>
       {{/each}}
     </tr>
   </thead>
   <tbody>
     {{#each rounds}}
-      <tr>
-        <td>{{localized-date startsOn}}</td>
+      <tr {{bind-attr class='isCurrent'}}>
+        <th>{{localized-date startsOn}}</th>
         {{#each assignments}}
-          <td>
+          <td {{bind-attr class="isLast"}}>
             {{#link-to 'person.assignment' person this}}
               {{#if duty.iconUrl}}
                 <img {{bind-attr src=duty.iconUrl}} />

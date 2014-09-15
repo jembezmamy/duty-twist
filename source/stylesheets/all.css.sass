@@ -1,1 +1,80 @@
-// require 'normalize'
+//= require normalize.css
+  
+$lightest-grey: #E3E8EB
+$light-grey: #B8BFC4
+$grey: #6A7680
+$dark-grey: #353B40
+
+$blue: #2696F0
+$light-blue: #CCEDFF
+
+=light-shadow
+  box-shadow: 0 1px 2px rgba(black, 0.2)
+
+body
+  background-color: $lightest-grey
+  font-family: "Helvetica Neue", Arial, sans-serif
+  font-weight: 200
+  font-size: 14px
+  
+.wrapper
+  max-width: 360px
+  margin: 30px auto
+  padding: 10px 0
+  background-color: white
+  border-radius: 3px
+  position: relative
+  
+.button
+  border-radius: 3px
+  background-color: white
+  color: black
+  text-decoration: none
+  display: inline-block
+  padding: 0 5px
+  line-height: 20px
+  vertical-align: middle
+  border: 1px solid $lightest-grey
+  &:hover
+    background-color: $blue
+    border-color: $blue
+    color: white
+  
+
+
+table.schedule
+  line-height: 40px
+  width: 100%
+  img
+    max-width: 30px
+    max-height: 30px
+    margin: 5px
+    border-radius: 3px
+    +light-shadow
+    vertical-align: middle
+  thead th
+    font-weight: 200
+  tbody 
+    th, td
+      border-bottom: 1px solid $lightest-grey
+      padding: 10px 5px
+      font-weight: 200
+    th
+      padding-left: 15px
+    td
+      text-align: center
+      &.is-last
+        padding-right: 15px
+    tr:hover
+      td, th
+        background-color: mix($lightest-grey, white, 30%)
+    tr.is-current
+      th, td
+        background-color: $light-blue
+      th
+        font-weight: bold
+      img
+        max-width: 40px
+        max-height: 40px
+        margin: 0
+      

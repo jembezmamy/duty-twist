@@ -8,6 +8,9 @@ class DutyTwist.Round
   startsOn: ~>
     new Date(@startTime)
     
+  isCurrent: ~>
+    @schedule.currentRound == @number
+    
   assignments: ~>
     n = @number
     @schedule.people.map (person) =>
