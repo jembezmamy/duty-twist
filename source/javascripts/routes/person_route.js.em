@@ -1,7 +1,7 @@
 class DutyTwist.PersonRoute extends Em.Route
   
   model: (params) ->
-    DutyTwist.Person.find().findBy "id", params.person_id
+    DutyTwist.Schedule.get().people.findBy "id", params.person_id
     
   afterModel: (model) ->
-    this.transitionTo "person.assignment", model, DutyTwist.Schedule.find().currentRound
+    this.transitionTo "person.assignment", model, DutyTwist.Schedule.get().currentRound
