@@ -1,1 +1,0 @@
-Ember.TEMPLATES.person=Ember.Handlebars.template(function(e,s,t,r,a){this.compilerInfo=[4,">= 1.0.0"],t=this.merge(t,Ember.Handlebars.helpers),a=a||{};var h,n="";return h=t._triageMustache.call(s,"outlet",{hash:{},hashTypes:{},hashContexts:{},contexts:[s],types:["ID"],data:a}),(h||0===h)&&a.buffer.push(h),a.buffer.push("\n"),n});
