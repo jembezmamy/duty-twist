@@ -1,5 +1,5 @@
 DutyTwist.DATA = 
-  people: ["Krzysiek", "Emilka", "Paweł", "Ania"]
+  people: ["Kevin", "Emilka", "Paweł", "Ania"]
   duties: [
     {name: "Kuchnia",     image: "images/duties/kitchen.jpg",  icon: "images/duties/kitchen-icon.png"},
     {name: "Przedpokój",  image: "images/duties/hall.jpg",     icon: "images/duties/hall-icon.png"},
