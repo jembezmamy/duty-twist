@@ -1,5 +1,5 @@
-DutyTwist.DATA = 
-  people: ["Jaga", "Emilka", "Paweł", "Magda"]
+DutyTwist.DATA =
+  people: ["Jaga", "Emilka", "Paweł", "Paćka"]
   duties: [
     {name: "Kuchnia",     image: "images/duties/kitchen.jpg",  icon: "images/duties/kitchen-icon.png"},
     {name: "Przedpokój",  image: "images/duties/hall.jpg",     icon: "images/duties/hall-icon.png"},
