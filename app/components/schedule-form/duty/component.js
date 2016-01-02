@@ -20,8 +20,14 @@ export default Ember.Component.extend(EmberValidations, {
     name: {
       presence: true
     },
-    image {
+    image: {
       presence: true
     }
-  }
+  },
+
+  images: Ember.computed("model", {
+    get() {
+      return this.get("model.constructor").metaForProperty("image").options.values;
+    }
+  })
 });

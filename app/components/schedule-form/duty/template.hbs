@@ -1,6 +1,6 @@
 {{#simple-fields for=this on=parentForm as |f|}}
   {{input-on f "name" label=false}}
-  {{input-on f "image" label=false}}
+  {{input-on f "image" label=false as="image" collection=images}}
   <button type="button" {{action "remove"}} title={{t "components.scheduleForm.duty.remove"}}>
     x
   </button>
