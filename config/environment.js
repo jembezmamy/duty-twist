@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'duty-twist',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://shining-heat-2164.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

@@ -30,6 +30,15 @@ export default Ember.Controller.extend(EmberValidations, {
       this.get("model.duties").createRecord({
         position: this.get("model.duties.length") + 1
       });
+    },
+
+    submit() {
+      var promises = this.get("model.people").filterBy("_destroy").invoke("destroyRecord");
+      promises.pushObjects(this.get("model.duties").filterBy("_destroy").invoke("destroyRecord"));
+      var model = this.get("model");
+      Ember.RSVP.all(promises).then(function() {
+        model.save();
+      });
     }
   },
 

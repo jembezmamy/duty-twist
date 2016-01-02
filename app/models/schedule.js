@@ -10,6 +10,6 @@ export default DS.Model.extend({
   interval:     DS.attr('number', { defaultValue: 1 }),
   intervalUnit: DS.attr("string", { defaultValue: "week" }),
 
-  people:       DS.hasMany('person'),
-  duties:       DS.hasMany('duty')
+  people:       DS.hasMany('person', { async: false }),
+  duties:       DS.hasMany('duty', { async: false })
 });
