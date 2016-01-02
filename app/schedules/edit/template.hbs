@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+
+{{#simple-form for=this action="submit" as |f|}}
+  {{input-on f "startsOn"}}
+  {{input-on f "interval"}}
+  {{input-on f "intervalUnit" collection=units label=false}}
+  {{submit-on f}}
+{{/simple-form}}
