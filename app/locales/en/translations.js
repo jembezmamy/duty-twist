@@ -1,4 +1,27 @@
 export default {
+  components: {
+    scheduleForm: {
+      duty: {
+        remove: "Remove task"
+      },
+      person: {
+        remove: "Remove person"
+      }
+    }
+  },
+
+  duty: {
+    placeholders: {
+      name: "Name"
+    }
+  },
+
+  person: {
+    placeholders: {
+      name: "Name"
+    }
+  },
+
   schedule: {
     attributes: {
       startsOn: "First day",
@@ -7,7 +30,11 @@ export default {
   },
   schedules: {
     edit: {
-      title: "Schedule settings"
+      title: "Schedule settings",
+      people: "People",
+      addPerson: "Add person",
+      duties: "Tasks",
+      addDuty: "Add task"
     },
     new: {
       title: "New schedule"

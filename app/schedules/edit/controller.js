@@ -20,6 +20,19 @@ export default Ember.Controller.extend(EmberValidations, {
     }
   },
 
+  actions: {
+    addPerson() {
+      this.get("model.people").createRecord({
+        position: this.get("model.people.length") + 1
+      });
+    },
+    addDuty() {
+      this.get("model.duties").createRecord({
+        position: this.get("model.duties.length") + 1
+      });
+    }
+  },
+
   title: Ember.computed("i18n.locale", "model.isNew", {
     get() {
       var key = this.get("model.isNew") ? "schedules.new.title" : "schedules.edit.title";
