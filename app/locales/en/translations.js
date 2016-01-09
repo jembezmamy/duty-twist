@@ -36,6 +36,12 @@ export default {
       duties: "Tasks",
       addDuty: "Add task"
     },
+    index: {
+      createNew: "Create new schedule",
+      orFind: "…or find by id",
+      tokenPlaceholder: "Type schedule id",
+      submit: "Find"
+    },
     new: {
       title: "New schedule"
     }

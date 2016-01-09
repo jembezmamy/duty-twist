@@ -1,0 +1,9 @@
+{{#link-to "schedules.new"}}
+  {{t "schedules.index.createNew"}}
+{{/link-to}}
+
+<h2>{{t "schedules.index.orFind"}}</h2>
+{{input value=token placeholder=(t "schedules.index.tokenPlaceholder")}}
+<button type="button" {{action "findByToken"}}>
+  {{t "schedules.index.submit"}}
+</button>
