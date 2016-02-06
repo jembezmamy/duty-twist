@@ -1,0 +1,8 @@
+<th>
+  {{model.startsOn}}
+</th>
+{{#each model.assignments as |assignment|}}
+  <td>
+    {{assignment.duty.name}}
+  </td>
+{{/each}}

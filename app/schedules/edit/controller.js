@@ -4,11 +4,15 @@ import EmberValidations from "ember-validations";
 export default Ember.Controller.extend(EmberValidations, {
   i18n: Ember.inject.service(),
 
+  name:         Ember.computed.alias("model.name"),
   startsOn:     Ember.computed.alias("model.startsOn"),
   interval:     Ember.computed.alias("model.interval"),
   intervalUnit: Ember.computed.alias("model.intervalUnit"),
 
   validations: {
+    name: {
+      presence: true
+    },
     startsOn: {
       presence: true
     },
@@ -33,11 +37,17 @@ export default Ember.Controller.extend(EmberValidations, {
     },
 
     submit() {
-      var promises = this.get("model.people").filterBy("_destroy").invoke("destroyRecord");
-      promises.pushObjects(this.get("model.duties").filterBy("_destroy").invoke("destroyRecord"));
+      var promises = [];
+      promises.pushObjects(this.get("model.people").filterBy("_destroy", true).invoke("destroyRecord"));
+      // promises.pushObjects(this.get("model.people").filterBy("_destroy", false).invoke("save"));
+      promises.pushObjects(this.get("model.duties").filterBy("_destroy", true).invoke("destroyRecord"));
+      // promises.pushObjects(this.get("model.duties").filterBy("_destroy", false).invoke("save"));
       var model = this.get("model");
+      let self = this;
       Ember.RSVP.all(promises).then(function() {
-        model.save();
+        model.save().then(function() {
+          self.transitionToRoute("schedules.show", self.get("model"));
+        });
       });
     }
   },

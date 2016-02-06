@@ -6,7 +6,8 @@ export default DS.Model.extend({
     defaultValue: "a",
     values: ["a", "b", "c"]
   }),
-  _destroy: DS.attr("boolean"),
 
-  schedule: DS.belongsTo('schedule')
+  schedule: DS.belongsTo('schedule', {async: false}),
+
+  _destroy: false
 });

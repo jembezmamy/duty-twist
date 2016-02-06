@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <th></th>
+    {{#each people as |person|}}
+      <th>{{person.name}}</th>
+    {{/each}}
+  </tr>
+  {{#each rounds as |round|}}
+    {{schedule-table/round model=round}}
+  {{/each}}
+</table>

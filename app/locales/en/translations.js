@@ -44,6 +44,9 @@ export default {
     },
     new: {
       title: "New schedule"
+    },
+    show: {
+      edit: "Edit"
     }
   },
 
