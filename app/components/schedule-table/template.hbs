@@ -2,7 +2,11 @@
   <tr>
     <th></th>
     {{#each people as |person|}}
-      <th>{{person.name}}</th>
+      <th>
+        {{#link-to "schedules.show.person" person.schedule person}}
+          {{person.name}}
+        {{/link-to}}
+      </th>
     {{/each}}
   </tr>
   {{#each rounds as |round|}}

@@ -8,7 +8,7 @@ export default Ember.Object.extend({
   objectAt(i) {
     return Round.create({
       schedule: this.get("schedule"),
-      number: i
+      number: i * 1
     });
   }
 })

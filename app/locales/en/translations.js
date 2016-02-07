@@ -46,7 +46,14 @@ export default {
       title: "New schedule"
     },
     show: {
-      edit: "Edit"
+      edit: "Edit",
+      person: {
+        back: "Back",
+        assignment: {
+          previous: "Previous",
+          next: "Next"
+        }
+      }
     }
   },
 

@@ -6,7 +6,6 @@ export default Ember.Controller.extend({
 
   rounds: Ember.computed({
     get() {
-      console.log(this);
       return Ember.Object.extend(Ember.Array).create({
         content: this.get("model.rounds"),
         length: 10,

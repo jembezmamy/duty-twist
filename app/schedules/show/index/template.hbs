@@ -1,0 +1,6 @@
+<h1>{{model.name}}</h1>
+{{#link-to "schedules.edit" model}}
+  {{t "schedules.show.edit"}}
+{{/link-to}}
+
+{{schedule-table people=model.people rounds=rounds}}

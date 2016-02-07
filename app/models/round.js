@@ -23,7 +23,8 @@ export default Ember.Object.extend({
       return people.map((person, i) => {
         return Assignment.create({
           person: person,
-          duty: duties.objectAt((number + i) % length)
+          duty: duties.objectAt((number + i) % length),
+          round: this
         })
       });
     }

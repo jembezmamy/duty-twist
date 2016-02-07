@@ -10,4 +10,5 @@ export default DS.Model.extend({
   schedule: DS.belongsTo('schedule', {async: false}),
 
   _destroy: false
+  
 });
