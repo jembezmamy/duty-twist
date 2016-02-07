@@ -6,6 +6,6 @@ export default Ember.Route.extend({
   },
 
   serialize(model) {
-    return {round_number: model.get("number")};
+    return {round_number: model.get("round.number")};
   }
 })

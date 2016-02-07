@@ -3,7 +3,7 @@
 </th>
 {{#each model.assignments as |assignment|}}
   <td>
-    {{#link-to "schedules.show.person.assignment" model.schedule assignment.person model.number}}
+    {{#link-to "schedules.show.person.assignment" model.schedule assignment.person assignment}}
       {{assignment.duty.name}}
     {{/link-to}}
   </td>
