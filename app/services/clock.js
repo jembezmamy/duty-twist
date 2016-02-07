@@ -27,6 +27,24 @@ export default Ember.Service.extend({
       params.day = day;
     }
     this.setProperties(params);
-  }
+  },
+
+  dayDate: Ember.computed("day", {
+    get() {
+      return new Date();
+    }
+  }),
+
+  hourDate: Ember.computed("hour", {
+    get() {
+      return new Date();
+    }
+  }),
+
+  minuteDate: Ember.computed("minute", {
+    get() {
+      return new Date();
+    }
+  })
 
 });

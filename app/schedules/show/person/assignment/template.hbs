@@ -1,4 +1,4 @@
-<h2>{{model.round.startsOn}}</h2>
+<h2>{{round-date model.round.startsOn clock.dayDate}}</h2>
 {{#link-to "schedules.show.person.assignment" model.person.schedule model.person previousRoundNumber}}
   {{ t "schedules.show.person.assignment.previous" }}
 {{/link-to}}
