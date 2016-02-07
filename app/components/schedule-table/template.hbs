@@ -10,6 +10,6 @@
     {{/each}}
   </tr>
   {{#each rounds as |round|}}
-    {{schedule-table/round model=round}}
+    {{schedule-table/round model=round currentRoundNumber=currentRoundNumber}}
   {{/each}}
 </table>

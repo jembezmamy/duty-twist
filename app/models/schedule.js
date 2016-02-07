@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 import moment from "moment";
-import RoundArray from "./round-array";
+import Round from "./round";
 
 export default DS.Model.extend({
   name:         DS.attr("string"),
@@ -15,10 +15,17 @@ export default DS.Model.extend({
   people:       DS.hasMany('person', { async: false }),
   duties:       DS.hasMany('duty',   { async: false }),
 
+
   rounds: Ember.computed({
     get() {
-      return RoundArray.create({
-        schedule: this
+      return Ember.Object.create({
+        schedule: this,
+        objectAt(i) {
+          return Round.create({
+            schedule: this.get("schedule"),
+            number: i * 1
+          });
+        }
       });
     }
   })

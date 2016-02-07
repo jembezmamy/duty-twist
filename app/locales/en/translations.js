@@ -7,6 +7,12 @@ export default {
       person: {
         remove: "Remove person"
       }
+    },
+    scheduleTable: {
+      round: {
+        current: "Today",
+        previous: "Previously"
+      }
     }
   },
 

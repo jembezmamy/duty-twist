@@ -1,5 +1,9 @@
 <th>
-  {{round-date model.startsOn clock.dayDate}}
+  {{#if label}}
+    {{label}}
+  {{else}}
+    {{round-date model.startsOn clock.dayDate}}
+  {{/if}}
 </th>
 {{#each model.assignments as |assignment|}}
   <td>
