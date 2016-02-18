@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route("schedules", {path: "/"}, function() {
     this.route("new");
+    this.route("join");
     this.route("edit", {path: "/:schedule_id/edit"});
     this.route("show", {path: "/:schedule_id"}, function() {
       this.route("person", {path: "/:person_token"}, function() {

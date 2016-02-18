@@ -4,7 +4,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    sassOptions: {
+      inputFile: "app.sass",
+      includePaths: [
+        "app/components", "app"
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -21,6 +26,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import("vendor/remove-diacritics.js");
+  app.import("vendor/modernizr.min.js");
 
   return app.toTree();
 };

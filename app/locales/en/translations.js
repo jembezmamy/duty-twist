@@ -1,4 +1,9 @@
 export default {
+  app: {
+    title: "DutyTwist",
+    slogan: "Schedule your chores"
+  },
+
   components: {
     scheduleForm: {
       duty: {
@@ -43,10 +48,8 @@ export default {
       addDuty: "Add task"
     },
     index: {
-      createNew: "Create new schedule",
-      orFind: "…or find by id",
-      tokenPlaceholder: "Type schedule id",
-      submit: "Find"
+      createNew: "Create schedule",
+      join: "Join schedule"
     },
     new: {
       title: "New schedule"

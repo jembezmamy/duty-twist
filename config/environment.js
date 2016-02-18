@@ -4,7 +4,11 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'duty-twist',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'style-src': "'self' data: fonts.googleapis.com",
+      'font-src': "'self' data: fonts.gstatic.com",
+    },
     firebase: 'https://shining-heat-2164.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',

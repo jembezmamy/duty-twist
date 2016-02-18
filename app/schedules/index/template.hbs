@@ -1,9 +1,22 @@
-{{#link-to "schedules.new"}}
-  {{t "schedules.index.createNew"}}
-{{/link-to}}
+<div class="schedules-index-splash">
+  <h1 class="schedules-index-logo">
+    {{image-tag src="logo.svg" alt=(t "app.title")}}
+  </h1>
+  <h2 class="schedules-index-slogan">
+    {{t "app.slogan"}}
+  </h2>
+</div>
 
-<h2>{{t "schedules.index.orFind"}}</h2>
-{{input value=token placeholder=(t "schedules.index.tokenPlaceholder")}}
-<button type="button" {{action "findByToken"}}>
-  {{t "schedules.index.submit"}}
-</button>
+<nav class="schedules-index-actions">
+  {{#link-to "schedules.join"}}
+    {{#basic-button class="negative" tagName="div"}}
+      {{t "schedules.index.join"}}
+    {{/basic-button}}
+  {{/link-to}}
+
+  {{#link-to "schedules.new"}}
+    {{#basic-button class="primary" tagName="div"}}
+      {{t "schedules.index.createNew"}}
+    {{/basic-button}}
+  {{/link-to}}
+</nav>
