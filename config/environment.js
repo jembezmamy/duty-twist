@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
-      'style-src': "'self' data: fonts.googleapis.com",
+      'style-src': "'self' data: fonts.googleapis.com 'unsafe-inline'",
       'font-src': "'self' data: fonts.gstatic.com",
     },
     firebase: 'https://shining-heat-2164.firebaseio.com/',

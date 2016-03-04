@@ -8,15 +8,11 @@
 </div>
 
 <nav class="schedules-index-actions">
-  {{#link-to "schedules.join"}}
-    {{#basic-button class="negative" tagName="div"}}
-      {{t "schedules.index.join"}}
-    {{/basic-button}}
-  {{/link-to}}
+  {{#link-button "schedules.join" class="negative"}}
+    {{t "schedules.index.join"}}
+  {{/link-button}}
 
-  {{#link-to "schedules.new"}}
-    {{#basic-button class="primary" tagName="div"}}
-      {{t "schedules.index.createNew"}}
-    {{/basic-button}}
-  {{/link-to}}
+  {{#link-button "schedules.new" class="primary"}}
+    {{t "schedules.index.createNew"}}
+  {{/link-button}}
 </nav>
