@@ -1,34 +1,36 @@
-<h1>{{title}}</h1>
+{{#app-layout title=title}}
 
-{{#simple-form for=this action="submit" as |f|}}
-  {{input-on f "name"}}
-  {{input-on f "startsOn"}}
-  {{input-on f "interval"}}
-  {{input-on f "intervalUnit" collection=units label=false}}
+  {{#simple-form for=this action="submit" as |f|}}
+    {{input-on f "name"}}
+    {{input-on f "startsOn"}}
+    {{input-on f "interval"}}
+    {{input-on f "intervalUnit" collection=units label=false}}
 
-  <h2>{{t "schedules.edit.people"}}</h2>
-  <ul>
-    {{#each model.people as |person|}}
-      {{#unless person._destroy}}
-        {{schedule-form/person model=person parentForm=f}}
-      {{/unless}}
-    {{/each}}
-  </ul>
-  <button {{action "addPerson"}} type="button">
-    {{t "schedules.edit.addPerson"}}
-  </button>
+    <h2>{{t "schedules.edit.people"}}</h2>
+    <ul>
+      {{#each model.people as |person|}}
+        {{#unless person._destroy}}
+          {{schedule-form/person model=person parentForm=f}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+    <button {{action "addPerson"}} type="button">
+      {{t "schedules.edit.addPerson"}}
+    </button>
 
-  <h2>{{t "schedules.edit.duties"}}</h2>
-  <ul>
-    {{#each model.duties as |duty|}}
-      {{#unless duty._destroy}}
-        {{schedule-form/duty model=duty parentForm=f}}
-      {{/unless}}
-    {{/each}}
-  </ul>
-  <button {{action "addDuty"}} type="button">
-    {{t "schedules.edit.addDuty"}}
-  </button>
+    <h2>{{t "schedules.edit.duties"}}</h2>
+    <ul>
+      {{#each model.duties as |duty|}}
+        {{#unless duty._destroy}}
+          {{schedule-form/duty model=duty parentForm=f}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+    <button {{action "addDuty"}} type="button">
+      {{t "schedules.edit.addDuty"}}
+    </button>
 
-  {{submit-on f}}
-{{/simple-form}}
+    {{submit-on f}}
+  {{/simple-form}}
+
+{{/app-layout}}

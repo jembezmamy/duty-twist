@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'duty-twist',
     environment: environment,
     contentSecurityPolicy: {
-      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com https://*.firebaseio.com",
       'style-src': "'self' data: fonts.googleapis.com 'unsafe-inline'",
       'font-src': "'self' data: fonts.gstatic.com",
     },

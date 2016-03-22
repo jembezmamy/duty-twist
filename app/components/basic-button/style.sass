@@ -4,13 +4,17 @@
   border-radius: 2px
   display: inline-block
   box-sizing: content-box
-  padding: 8px 20px
+  padding: 9px 20px
   color: $dark-grey
   font-family: $base-font
   font-size: 18px
   line-height: 20px
   cursor: pointer
   text-decoration: none
+  vertical-align: middle
+
+  i.icon
+    margin: -2px 6px -2px -2px
 
   &:hover, &:focus
     outline: none
@@ -18,9 +22,26 @@
   &.negative
     border-color: rgba(white, 0.5)
     color: white
+    &:hover, &:focus
+      border-color: rgba(white, 0.75)
 
   &.primary
     background-color: $yellow
     color: $dark-green
     border: none
-    padding: 9px 20px
+    padding-top: 10px
+    padding-bottom: 10px
+
+  &.transparent
+    border: none
+    padding-top: 10px
+    padding-bottom: 10px
+
+  &.icon-only
+    padding-left: 10px
+    padding-right: 10px
+    i.icon
+      margin-right: -2px
+    opacity: 0.5
+    &:hover, &:focus
+      opacity: 1

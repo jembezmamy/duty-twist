@@ -1,0 +1,12 @@
+$icons: (arrow-left, hamburger)
+
+i.icon
+  width: 24px
+  height: 24px
+  display: block
+  background-image: url("/assets/images/icons.svg")
+  html.no-svg &
+    background-image: url("/assets/images/icons.png")
+  @for $i from 1 through length($icons)
+    &.#{nth($icons, $i)}
+      background-position: -24px * ($i - 1) 0

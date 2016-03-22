@@ -1,8 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
 
 @import "mixins";
+@import "icons";
 @import "text";
+@import "layout";
 
+@import "components/app-layout/style";
 @import "components/basic-button/style";
 @import "components/ripple-effect/style";
 

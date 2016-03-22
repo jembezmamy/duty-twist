@@ -1,0 +1,56 @@
+.app-layout-header
+  height: 128px
+  background-color: $green
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  overflow: hidden
+  transition: box-shadow 250ms ease-in-out
+  &.is-sticked
+    +shadow-4
+    z-index: 10
+  @media (max-width: $width-480)
+    +shadow-4
+    z-index: 10
+    height: 48px !important
+
+.app-layout-header-content
+  margin: 4px
+
+.app-layout-header-title
+  line-height: 24px
+  height: 24px
+  color: white
+  display: inline-block
+  vertical-align: middle
+  opacity: 0
+  .app-layout-header.is-sticked &
+    opacity: 1
+  @media (max-width: $width-480)
+    opacity: 1
+
+.app-layout-content-wrapper
+  max-width: 720px
+  padding: 0 8px
+  margin: 64px auto
+  @media (max-width: $width-480)
+    padding: 0
+    margin: 48px 0 0
+
+.app-layout-content
+  background-color: white
+  border-radius: 3px
+  +shadow-4
+  position: relative
+  @media (max-width: $width-480)
+    border-radius: 0
+    box-shadow: none
+
+.app-layout-content-title
+  line-height: 24px
+  height: 24px
+  border-bottom: 1px solid $light-grey
+  padding: 20px
+  @media (max-width: $width-480)
+    display: none
