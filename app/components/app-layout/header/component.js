@@ -34,7 +34,7 @@ export default Ember.Component.extend({
     this.setProperties({
       height: max - progress * (max - min),
       isSticked: progress === 1
-    })
+    });
   },
 
   style: Ember.computed("height", {

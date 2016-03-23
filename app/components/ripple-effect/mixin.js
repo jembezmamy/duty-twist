@@ -16,6 +16,6 @@ export default Ember.Mixin.create({
     let y = e.pageY - offset.top;
     this.get("ripples").pushObject({
       x: x, y: y
-    })
+    });
   }
-})
+});

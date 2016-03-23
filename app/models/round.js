@@ -25,8 +25,8 @@ export default Ember.Object.extend({
           person: person,
           duty: duties.objectAt((number + i) % length),
           round: this
-        })
+        });
       });
     }
   })
-})
+});

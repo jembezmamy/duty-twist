@@ -11,4 +11,4 @@ export default Ember.Component.extend({
       return `left: ${x}px; top: ${y}px`.htmlSafe();
     }
   })
-})
+});

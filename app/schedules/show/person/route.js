@@ -8,4 +8,4 @@ export default Ember.Route.extend({
   serialize(model) {
     return {person_token: model.get("token")};
   }
-})
+});

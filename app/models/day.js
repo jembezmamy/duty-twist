@@ -13,4 +13,4 @@ export default Ember.Object.extend({
       return this.get("schedule.rounds").objectAt(roundNumber);
     }
   })
-})
+});

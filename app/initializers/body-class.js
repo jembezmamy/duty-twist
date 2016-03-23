@@ -17,7 +17,7 @@ export function initialize(application) {
       return this.routeName.replace(/\./g, '-').dasherize();
     }
   });
-};
+}
 
 export default {
   name: 'body-class',

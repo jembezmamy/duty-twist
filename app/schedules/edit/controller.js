@@ -64,7 +64,7 @@ export default Ember.Controller.extend(EmberValidations, {
       let context = this;
       return ["day", "week", "month"].map(function(value) {
         return Option.create({id: value, context: context});
-      })
+      });
     }
   })
 });

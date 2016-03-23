@@ -8,6 +8,6 @@ export function roundDate(params) {
   } else {
     return date.format("ll");
   }
-};
+}
 
 export default Ember.Helper.helper(roundDate);

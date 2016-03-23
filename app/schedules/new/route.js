@@ -28,6 +28,6 @@ export default EditRoute.extend({
       } else {
         return id;
       }
-    })
+    });
   }
 });

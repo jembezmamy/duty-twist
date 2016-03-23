@@ -14,4 +14,4 @@ export default Ember.Controller.extend({
       return this.get("model.round.number") + 1;
     }
   }),
-})
+});
