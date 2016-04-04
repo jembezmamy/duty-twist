@@ -1,10 +1,30 @@
 {{#app-layout title=title}}
 
   {{#simple-form for=this action="submit" as |f|}}
-    {{input-on f "name"}}
-    {{input-on f "startsOn"}}
-    {{input-on f "interval"}}
-    {{input-on f "intervalUnit" collection=units label=false}}
+    <div class="row space-below space-above-all">
+      <div class="column size-6">
+        {{input-on f "name"}}
+      </div>
+    </div>
+    <div class="row space-below">
+      <div class="column size-6">
+        {{input-on f "startsOn"}}
+      </div>
+      <div class="column size-6">
+        <div class="row narrow without-margin">
+          <div class="column size-6">
+            {{input-on f "interval"}}
+          </div>
+          <div class="column size-6">
+            {{input-on f "intervalUnit" collection=units label=false}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
 
     <h2>{{t "schedules.edit.people"}}</h2>
     <ul>

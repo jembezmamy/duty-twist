@@ -3,3 +3,37 @@ body
   height: 100%
   background-color: $light-grey
   background-image: radial-gradient(circle farthest-corner, transparent 50%, rgba(black, 0.05) 100%)
+
+$gutter: 24px
+$narrow-gutter: 8px
+
+.row
+  margin-left: $gutter
+  > .column
+    float: left
+    padding-right: $gutter
+    box-sizing: border-box
+    @for $i from 1 through 12
+      &.size-#{$i}
+        width: 100% * $i / 12
+
+  &.space-below > .column
+    margin-bottom: 24px
+  &.space-above-all
+    margin-top: 24px
+
+  &.narrow
+    margin-left: $narrow-gutter
+    > .column
+      padding-right: $narrow-gutter
+
+  &.without-margin
+    margin-left: 0
+    margin-right: -$gutter
+    &.narrow
+      margin-right: -$narrow-gutter
+
+  &::after
+    content: ""
+    display: block
+    clear: left
