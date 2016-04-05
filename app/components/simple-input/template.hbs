@@ -1,0 +1,31 @@
+<div class="label">
+  {{#if hasLabel}}{{#simple-label for=inputElementId isRequired=isRequired}}{{label}}{{/simple-label}}{{/if}}
+</div>
+<div class={{fieldClassName}}>
+  {{#if hasInlineLabel}}
+    {{#simple-label for=inputElementId isRequired=isRequired}}
+      {{component inputComponentName
+        additionalAttributes=additionalAttributes modelValue=value
+        inputElementId=inputElementId class=inputClassName placeholder=placeholder
+        name=inputName validations=validations}}
+      {{label}}
+    {{/simple-label}}
+  {{else}}
+    {{component inputComponentName
+      additionalAttributes=additionalAttributes modelValue=value
+      inputElementId=inputElementId class=inputClassName placeholder=placeholder
+      name=inputName validations=validations}}
+  {{/if}}
+  {{#if hasUnit}}
+    <div class={{unitClassName}}>{{unit}}</div>
+  {{/if}}
+  <div class="input-border"></div>
+  {{#if hasHint}}
+    <div class={{hintClassName}}>{{hint}}</div>
+  {{/if}}
+  <div class={{errorsClassName}}>
+    {{#if hasErrors}}
+      {{errorMessages}}
+    {{/if}}
+  </div>
+</div>

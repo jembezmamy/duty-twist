@@ -1,0 +1,59 @@
+.input
+  input, textarea
+    background: transparent
+    border: none
+    font: inherit
+    display: block
+    width: 100%
+    padding: 5px 0
+    &:focus
+      outline: none
+  input
+    box-sizing: content-box
+    height: 20px
+  &.big
+    font-size: 20px
+    line-height: 30px
+    input
+      height: 30px
+
+.label
+  height: 15px
+  line-height: 15px
+  font-size: 12px
+  color: $grey
+  transition: transform 250ms $ease-in-out-quad
+  transform-origin: top left
+  width: 66%
+  label
+    display: block
+    white-space: nowrap
+    text-overflow: ellipsis
+  abbr
+    position: relative
+    top: 0.25em
+    margin-left: 0.1em
+  .input.label-as-placeholder &
+    transform: scale(1.333) translateY(13px)
+  .input.big.label-as-placeholder &
+    transform: scale(1.666) translateY(13px)
+  .input.date-input &
+    transform: none
+
+
+.input-border
+  display: block
+  height: 1px
+  background-color: $light-grey
+  .input.is-focused &
+    background-color: $yellow
+    transform: scaleY(3)
+  .input-with-errors &
+    background-color: $red
+
+.errors
+  color: $red
+  font-size: 12px
+  line-height: 15px
+  min-height: 15px
+  margin-top: 4px
