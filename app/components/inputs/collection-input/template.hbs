@@ -1,0 +1,9 @@
+<div class="input-fake-input">
+  {{selectedOptionLabel}}
+</div>
+<select class="collection-input-select">
+  {{#each collection as |option|}}
+    {{component optionComponentName content=option selectedValue=value
+      valuePath=optionValuePath labelPath=optionLabelPath}}
+  {{/each}}
+</select>
