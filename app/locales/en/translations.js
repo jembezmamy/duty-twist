@@ -22,13 +22,13 @@ export default {
   },
 
   duty: {
-    placeholders: {
+    attributes: {
       name: "Name"
     }
   },
 
   person: {
-    placeholders: {
+    attributes: {
       name: "Name"
     }
   },

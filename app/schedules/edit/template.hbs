@@ -1,10 +1,11 @@
 {{#app-layout title=title}}
 
   {{#simple-form for=this action="submit" as |f|}}
-    <div class="row space-below space-above-all">
+    <div class="row space-below-all space-above-all">
       <div class="column size-6">
         {{input-on f "name" class="big"}}
       </div>
+      <div class="column size-6"></div>
     </div>
     <div class="row space-below">
       <div class="column size-6">
@@ -25,8 +26,12 @@
 
 
 
+    <div class="row space-above">
+      <div class="column">
+        <h2 class="header-2">{{t "schedules.edit.people"}}</h2>
+      </div>
+    </div>
 
-    <h2>{{t "schedules.edit.people"}}</h2>
     <ul>
       {{#each model.people as |person|}}
         {{#unless person._destroy}}
@@ -34,11 +39,20 @@
         {{/unless}}
       {{/each}}
     </ul>
-    <button {{action "addPerson"}} type="button">
-      {{t "schedules.edit.addPerson"}}
-    </button>
+    <div class="row space-above">
+      <div class="column">
+        {{#basic-button action="addPerson"}}
+          {{t "schedules.edit.addPerson"}}
+        {{/basic-button}}
+      </div>
+    </div>
 
-    <h2>{{t "schedules.edit.duties"}}</h2>
+
+    <div class="row space-above">
+      <div class="column">
+        <h2 class="header-2">{{t "schedules.edit.duties"}}</h2>
+      </div>
+    </div>
     <ul>
       {{#each model.duties as |duty|}}
         {{#unless duty._destroy}}
@@ -46,9 +60,13 @@
         {{/unless}}
       {{/each}}
     </ul>
-    <button {{action "addDuty"}} type="button">
-      {{t "schedules.edit.addDuty"}}
-    </button>
+    <div class="row space-above">
+      <div class="column">
+        {{#basic-button action="addDuty"}}
+          {{t "schedules.edit.addDuty"}}
+        {{/basic-button}}
+      </div>
+    </div>
 
     {{submit-on f}}
   {{/simple-form}}

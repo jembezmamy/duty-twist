@@ -1,6 +1,12 @@
 {{#simple-fields for=this on=parentForm as |f|}}
-  {{input-on f "name" label=false}}
-  <button type="button" {{action "remove"}} title={{t "components.scheduleForm.person.remove"}}>
-    x
-  </button>
+  <div class="row space-above">
+    <div class="column grow">
+      {{input-on f "name"}}
+    </div>
+    <div class="column shrink input-aligned">
+      {{#basic-button action="remove" class="icon-only transparent" title=(t "components.scheduleForm.person.remove")}}
+        <i class="icon cross-small-grey"></i>
+      {{/basic-button}}
+    </div>
+  </div>
 {{/simple-fields}}

@@ -9,6 +9,7 @@ $narrow-gutter: 8px
 
 .row
   margin-left: $gutter
+  display: flex
   > .column
     float: left
     padding-right: $gutter
@@ -16,9 +17,20 @@ $narrow-gutter: 8px
     @for $i from 1 through 12
       &.size-#{$i}
         width: 100% * $i / 12
+        flex-grow: $i
+    &.grow
+      flex-grow: 12
+      flex-shrink: 0
+    &.shrink
+      flex-shrink: 12
+      flex-grow: 0
 
   &.space-below > .column
     margin-bottom: 24px
+  &.space-below-all
+    margin-bottom: 24px
+  &.space-above > .column
+    margin-top: 24px
   &.space-above-all
     margin-top: 24px
 
