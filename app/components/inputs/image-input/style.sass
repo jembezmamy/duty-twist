@@ -1,0 +1,23 @@
+.image-input
+  position: relative
+  line-height: 30px
+  &:focus
+    outline: none
+
+.image-input-dropdown
+  position: absolute
+  top: 100%
+  margin-top: 5px
+  left: 0
+  width: 100%
+  background-color: white
+  border-radius: 5px
+  box-shadow: 0 5px 20px rgba(black, 0.2)
+  display: none
+  .image-input.dropdown-visible &
+    display: block
+
+.image-input-item
+  display: inline-block
+  height: 30px
+  vertical-align: top

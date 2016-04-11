@@ -1,1 +1,9 @@
-<img src={{src}} />
+<div class="image-input-value" {{action "toggleDropdown"}}>
+  {{inputs/image-input/item value=value}}
+</div>
+
+<div class="image-input-dropdown">
+  {{#each collection as |item|}}
+    {{inputs/image-input/item value=item action="select"}}
+  {{/each}}
+</div>

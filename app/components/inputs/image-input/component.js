@@ -2,27 +2,49 @@ import Ember from "ember";
 import InputDefaults from "ember-simple-form/mixins/input-defaults";
 
 export default Ember.Component.extend(InputDefaults, {
-  tagName: "button",
-  attributeBindings: ["type"],
-  type: "button",
+  classNames: "image-input",
+  classNameBindings: ["dropdownVisible"],
+  attributeBindings: ["tabindex"],
+  tabindex: 0,
 
   value: Ember.computed.alias("modelValue"),
 
+  dropdownVisible: false,
+  didFocusByClick: false,
+
   actions: {
-    next() {
-      var i = this.get('collection').indexOf(this.get("value"));
-      i = (i + 1) % this.get("collection.length");
-      this.set("value", this.get("collection").objectAt(i));
+    showDropdown() {
+      this.set("dropdownVisible", true);
+    },
+
+    hideDropdown() {
+      this.set("dropdownVisible", false);
+    },
+
+    toggleDropdown() {
+      this.set("dropdownVisible", !this.get("dropdownVisible"));
+    },
+
+    select(value) {
+      this.set("value", value);
+      this.send("hideDropdown");
     }
   },
 
-  click() {
-    this.send("next");
+  mouseDown() {
+    if (!this.$().is(":focus")) {
+      this.set("didFocusByClick", true);
+    }
   },
 
-  src: Ember.computed("value", {
-    get() {
-      return "/assets/images/icons/" + this.get("value") + ".png";
+  focusIn() {
+    if (!this.get("didFocusByClick")) {
+      this.send("showDropdown");
     }
-  })
+    this.set("didFocusByClick", false);
+  },
+
+  focusOut() {
+    this.send("hideDropdown");
+  }
 });
