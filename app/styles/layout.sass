@@ -7,6 +7,16 @@ body
 $gutter: 24px
 $narrow-gutter: 8px
 
+.module
+  padding: 0 8px
+  margin: auto
+  &.size-1
+    max-width: 320px
+  &.size-2
+    max-width: 520px
+  &.size-3
+    max-width: 720px
+
 .row
   margin-left: $gutter
   display: flex
@@ -49,3 +59,9 @@ $narrow-gutter: 8px
     content: ""
     display: block
     clear: left
+
+
+.card
+  background-color: white
+  +shadow-1
+  border-radius: 2px

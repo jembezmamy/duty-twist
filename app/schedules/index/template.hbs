@@ -7,6 +7,15 @@
   </h2>
 </div>
 
+
+<ul class="module size-1 schedule-index-list">
+  {{#each model as |schedule|}}
+    <li>
+      {{schedule-summary model=schedule show="show"}}
+    </li>
+  {{/each}}
+</ul>
+
 <nav class="schedules-index-actions">
   {{#link-button "schedules.join" class="big negative"}}
     {{t "schedules.index.join"}}
