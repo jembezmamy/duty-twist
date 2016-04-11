@@ -39,7 +39,7 @@
         {{/unless}}
       {{/each}}
     </ul>
-    <div class="row space-above">
+    <div class="row space-above space-below">
       <div class="column">
         {{#basic-button action="addPerson"}}
           {{t "schedules.edit.addPerson"}}
@@ -60,7 +60,7 @@
         {{/unless}}
       {{/each}}
     </ul>
-    <div class="row space-above">
+    <div class="row space-above space-below">
       <div class="column">
         {{#basic-button action="addDuty"}}
           {{t "schedules.edit.addDuty"}}
@@ -68,7 +68,11 @@
       </div>
     </div>
 
-    {{submit-on f}}
+    <div class="row space-above space-below space-below-all">
+      <div class="column">
+        {{submit-on f}}
+      </div>
+    </div>
   {{/simple-form}}
 
 {{/app-layout}}
