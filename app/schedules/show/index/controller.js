@@ -5,6 +5,16 @@ export default Ember.Controller.extend({
 
   clock: Ember.inject.service(),
 
+  actions: {
+    goBack() {
+      this.transitionToRoute("schedules.index");
+    },
+
+    edit() {
+      this.transitionToRoute("schedules.edit", this.get("model"));
+    }
+  },
+
   rounds: Ember.computed("model.rounds", "today.round.number", {
     get() {
       let i0 = Math.max(0, this.get("today.round.number") - 1);

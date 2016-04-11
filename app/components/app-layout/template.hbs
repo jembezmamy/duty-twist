@@ -1,13 +1,3 @@
-{{#app-layout/header}}
-  {{#link-button "schedules.index" class="big transparent icon-only app-layout-header-button"}}
-    <i class="icon arrow-left"></i>
-  {{/link-button}}
-  <h1 class="app-layout-header-title header-1">{{title}}</h1>
-{{/app-layout/header}}
+{{app-layout/header on=this}}
 
-<div class="app-layout-content-wrapper">
-  <main class="app-layout-content">
-    <h1 class="app-layout-content-title header-1">{{title}}</h1>
-    {{yield}}
-  </main>
-</div>
+{{yield this}}

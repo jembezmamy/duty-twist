@@ -1,3 +1,13 @@
-<div class="app-layout-header-content">
-  {{yield}}
+<div class="app-layout-header-content row narrow">
+  <div class="column shrink">
+    {{#basic-button action="goBack" class="big transparent icon-only"}}
+      <i class="icon arrow-left"></i>
+    {{/basic-button}}
+  </div>
+  <div class="column grow">
+    <h1 class="app-layout-header-title header-1">{{on.title}}</h1>
+  </div>
+  <div class="column shrink">
+    {{app-layout/menu on=on class="app-layout-header-menu"}}
+  </div>
 </div>

@@ -1,6 +1,8 @@
-<h1>{{model.name}}</h1>
-{{#link-to "schedules.edit" model}}
-  {{t "schedules.show.edit"}}
-{{/link-to}}
+{{#app-layout title=model.name goBack="goBack" as |layout|}}
 
-{{schedule-table people=model.people rounds=rounds currentRoundNumber=today.round.number}}
+  {{app-layout/action on=layout action="edit" title=(t "schedules.show.edit") icon="pencil"}}
+
+  {{#app-layout/content on=layout}}
+    {{schedule-table people=model.people rounds=rounds currentRoundNumber=today.round.number}}
+  {{/app-layout/content}}
+{{/app-layout}}

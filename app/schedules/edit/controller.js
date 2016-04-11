@@ -49,6 +49,14 @@ export default Ember.Controller.extend(EmberValidations, {
           self.transitionToRoute("schedules.show", self.get("model"));
         });
       });
+    },
+
+    goBack() {
+      if (this.get("model.isNew")) {
+        this.transitionToRoute("schedules.index");
+      } else {
+        this.transitionToRoute("schedules.show", this.get("model"));
+      }
     }
   },
 

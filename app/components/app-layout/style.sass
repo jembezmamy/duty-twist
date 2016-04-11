@@ -18,12 +18,9 @@
 .app-layout-header-content
   margin: 4px
 
-.app-layout-header-button
-  margin: 0 5px
-
 .app-layout-header-title
-  line-height: 24px
-  height: 24px
+  line-height: 40px
+  height: 40px
   color: white
   display: inline-block
   vertical-align: middle
@@ -32,6 +29,13 @@
     opacity: 1
   @media (max-width: $width-480)
     opacity: 1
+
+.app-layout-header-menu
+  display: none
+  .app-layout-header.is-sticked &
+    display: block
+  @media (max-width: $width-480)
+    display: block
 
 .app-layout-content-wrapper
   max-width: 720px
@@ -51,9 +55,11 @@
     box-shadow: none
 
 .app-layout-content-title
-  line-height: 24px
-  height: 24px
+  line-height: 40px
+  height: 40px
   border-bottom: 1px solid $light-grey
-  padding: 20px
+  padding: 12px 0
+  .header-1
+    line-height: 40px
   @media (max-width: $width-480)
     display: none

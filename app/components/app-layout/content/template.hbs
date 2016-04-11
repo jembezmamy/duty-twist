@@ -1,0 +1,13 @@
+<main class="app-layout-content">
+  <div class="app-layout-content-title">
+    <div class="row">
+      <div class="column grow">
+        <h1 class="header-1">{{on.title}}</h1>
+      </div>
+      <div class="column shrink">
+        {{app-layout/menu on=on iconColor="grey"}}
+      </div>
+    </div>
+  </div>
+  {{yield}}
+</main>

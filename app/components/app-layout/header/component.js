@@ -13,6 +13,12 @@ export default Ember.Component.extend({
   height: 0,
   isSticked: false,
 
+  actions: {
+    goBack() {
+      this.get("on").send("goBack");
+    }
+  },
+
   didInsertElement() {
     this._super();
     $(window).on("scroll", $.proxy(this.handleScroll, this));

@@ -1,78 +1,82 @@
-{{#app-layout title=title}}
+{{#app-layout title=title goBack="goBack" as |layout|}}
 
-  {{#simple-form for=this action="submit" as |f|}}
-    <div class="row space-below-all space-above-all">
-      <div class="column size-6">
-        {{input-on f "name" class="big"}}
+  {{#app-layout/content on=layout}}
+
+    {{#simple-form for=this action="submit" as |f|}}
+      <div class="row space-below-all space-above-all">
+        <div class="column size-6">
+          {{input-on f "name" class="big"}}
+        </div>
+        <div class="column size-6"></div>
       </div>
-      <div class="column size-6"></div>
-    </div>
-    <div class="row space-below">
-      <div class="column size-6">
-        {{input-on f "startsOn"}}
-      </div>
-      <div class="column size-6">
-        <div class="row narrow without-margin">
-          <div class="column size-6">
-            {{input-on f "interval"}}
-          </div>
-          <div class="column size-6">
-            {{input-on f "intervalUnit" collection=units label=false}}
+      <div class="row space-below">
+        <div class="column size-6">
+          {{input-on f "startsOn"}}
+        </div>
+        <div class="column size-6">
+          <div class="row narrow without-margin">
+            <div class="column size-6">
+              {{input-on f "interval"}}
+            </div>
+            <div class="column size-6">
+              {{input-on f "intervalUnit" collection=units label=false}}
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
 
 
-    <div class="row space-above">
-      <div class="column">
-        <h2 class="header-2">{{t "schedules.edit.people"}}</h2>
+      <div class="row space-above">
+        <div class="column">
+          <h2 class="header-2">{{t "schedules.edit.people"}}</h2>
+        </div>
       </div>
-    </div>
 
-    <ul>
-      {{#each model.people as |person|}}
-        {{#unless person._destroy}}
-          {{schedule-form/person model=person parentForm=f}}
-        {{/unless}}
-      {{/each}}
-    </ul>
-    <div class="row space-above space-below">
-      <div class="column">
-        {{#basic-button action="addPerson"}}
-          {{t "schedules.edit.addPerson"}}
-        {{/basic-button}}
+      <ul>
+        {{#each model.people as |person|}}
+          {{#unless person._destroy}}
+            {{schedule-form/person model=person parentForm=f}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+      <div class="row space-above space-below">
+        <div class="column">
+          {{#basic-button action="addPerson"}}
+            {{t "schedules.edit.addPerson"}}
+          {{/basic-button}}
+        </div>
       </div>
-    </div>
 
 
-    <div class="row space-above">
-      <div class="column">
-        <h2 class="header-2">{{t "schedules.edit.duties"}}</h2>
+      <div class="row space-above">
+        <div class="column">
+          <h2 class="header-2">{{t "schedules.edit.duties"}}</h2>
+        </div>
       </div>
-    </div>
-    <ul>
-      {{#each model.duties as |duty|}}
-        {{#unless duty._destroy}}
-          {{schedule-form/duty model=duty parentForm=f}}
-        {{/unless}}
-      {{/each}}
-    </ul>
-    <div class="row space-above space-below">
-      <div class="column">
-        {{#basic-button action="addDuty"}}
-          {{t "schedules.edit.addDuty"}}
-        {{/basic-button}}
+      <ul>
+        {{#each model.duties as |duty|}}
+          {{#unless duty._destroy}}
+            {{schedule-form/duty model=duty parentForm=f}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+      <div class="row space-above space-below">
+        <div class="column">
+          {{#basic-button action="addDuty"}}
+            {{t "schedules.edit.addDuty"}}
+          {{/basic-button}}
+        </div>
       </div>
-    </div>
 
-    <div class="row space-above space-below space-below-all">
-      <div class="column">
-        {{submit-on f}}
+      <div class="row space-above space-below space-below-all">
+        <div class="column">
+          {{submit-on f}}
+        </div>
       </div>
-    </div>
-  {{/simple-form}}
+    {{/simple-form}}
+
+  {{/app-layout/content}}
 
 {{/app-layout}}
