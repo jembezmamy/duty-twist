@@ -1,9 +1,9 @@
-<table>
+{{#data-table}}
   <tr>
     <th></th>
     {{#each people as |person|}}
       <th>
-        {{#link-to "schedules.show.person" person.schedule person}}
+        {{#link-to "schedules.show.person" person.schedule person class="subtle-link"}}
           {{person.name}}
         {{/link-to}}
       </th>
@@ -12,4 +12,4 @@
   {{#each rounds as |round|}}
     {{schedule-table/round model=round currentRoundNumber=currentRoundNumber}}
   {{/each}}
-</table>
+{{/data-table}}

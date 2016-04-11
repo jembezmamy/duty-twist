@@ -2,9 +2,10 @@ import Ember from "ember";
 
 export default Ember.Component.extend({
   tagName: "img",
-  attributeBindings: "normalizedSrc:src",
+  attributeBindings: ["normalizedSrc:src", "alt"],
 
   src: null,
+  alt: null,
 
   normalizedSrc: Ember.computed("src", {
     get() {

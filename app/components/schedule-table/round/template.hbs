@@ -1,4 +1,4 @@
-<th>
+<th class="data-table-secondary-header">
   {{#if label}}
     {{label}}
   {{else}}
@@ -7,8 +7,6 @@
 </th>
 {{#each model.assignments as |assignment|}}
   <td>
-    {{#link-to "schedules.show.person.assignment" model.schedule assignment.person assignment}}
-      {{assignment.duty.name}}
-    {{/link-to}}
+    {{schedule-table/round/assignment model=assignment}}
   </td>
 {{/each}}

@@ -1,0 +1,25 @@
+.data-table
+  min-width: 100%
+  border-collapse: collapse
+  overflow-x: auto
+
+  th, td
+    text-align: left
+    padding: 12px 24px
+    border-bottom: 1px solid $light-grey
+
+  th
+    font-size: 13px
+    color: $grey
+    &.data-table-secondary-header
+      font-size: 10px
+      text-transform: uppercase
+      letter-spacing: 0.03em
+
+  tr
+    &:hover
+      th, td
+        background-color: $lightest-grey
+    &:last-child
+      th, td
+        border-bottom: none

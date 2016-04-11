@@ -20,13 +20,14 @@ export default Ember.Component.extend({
   },
 
   didInsertElement() {
-    this._super();
-    $(window).on("scroll", $.proxy(this.handleScroll, this));
+    this._super(...arguments);
+    let namespace = Ember.guidFor(this);
+    $(window).on(`scroll.${namespace}`, $.proxy(this.handleScroll, this));
   },
 
   willDestroy() {
-    $(window).off("scroll", this.handleScroll);
-    this._super();
+    $(window).off("." + Ember.guidFor(this));
+    this._super(...arguments);
   },
 
   handleScroll() {
