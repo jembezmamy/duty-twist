@@ -15,7 +15,7 @@ export default Ember.Mixin.create({
   },
 
   willDestroy() {
-    this.laterRuns.each((run) => {
+    this.laterRuns.forEach((run) => {
       Ember.run.cancel(run);
     });
     this._super(...arguments);

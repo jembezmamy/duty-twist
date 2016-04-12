@@ -1,8 +1,9 @@
-<h2>{{round-date model.round.startsOn clock.dayDate}}</h2>
-{{#link-to "schedules.show.person.assignment" model.person.schedule model.person previousRoundNumber}}
-  {{ t "schedules.show.person.assignment.previous" }}
-{{/link-to}}
-{{#link-to "schedules.show.person.assignment" model.person.schedule model.person nextRoundNumber}}
-  {{ t "schedules.show.person.assignment.next" }}
-{{/link-to}}
-{{duty-card model=model.duty}}
+{{#app-layout title=title goBack="goBack" as |layout|}}
+
+  {{app-layout/action on=layout action="previous" icon="chevron-left" title=(t "schedules.show.person.assignment.previous")}}
+  {{app-layout/action on=layout action="next" icon="chevron-right" title=(t "schedules.show.person.assignment.next")}}
+
+  {{#app-layout/content on=layout}}
+    {{duty-card model=model.duty}}
+  {{/app-layout/content}}
+{{/app-layout}}
