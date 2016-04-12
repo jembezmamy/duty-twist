@@ -1,6 +1,8 @@
-{{#data-table}}
+{{#data-table as |table|}}
   <tr>
-    <th></th>
+    <th>
+      {{data-table/navigation on=table}}
+    </th>
     {{#each people as |person|}}
       <th>
         {{#link-to "schedules.show.person" person.schedule person class="subtle-link"}}
