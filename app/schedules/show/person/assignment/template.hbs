@@ -3,7 +3,7 @@
   {{app-layout/action on=layout action="previous" icon="chevron-left" title=(t "schedules.show.person.assignment.previous")}}
   {{app-layout/action on=layout action="next" icon="chevron-right" title=(t "schedules.show.person.assignment.next")}}
 
-  {{#app-layout/content on=layout}}
+  {{#app-layout/content on=layout class="size-2"}}
     {{duty-card model=model.duty}}
   {{/app-layout/content}}
 {{/app-layout}}

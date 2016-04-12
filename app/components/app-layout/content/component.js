@@ -1,5 +1,5 @@
 import Ember from "ember";
 
 export default Ember.Component.extend({
-  classNames: "app-layout-content-wrapper"
+  classNames: "app-layout-content-wrapper module"
 });

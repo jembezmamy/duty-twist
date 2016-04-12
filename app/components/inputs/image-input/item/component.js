@@ -1,4 +1,5 @@
 import Ember from "ember";
+import {iconPath} from "duty-twist/models/duty";
 
 export default Ember.Component.extend({
   classNames: "image-input-item",
@@ -7,7 +8,7 @@ export default Ember.Component.extend({
 
   src: Ember.computed("value", {
     get() {
-      return `icons/${this.get("value")}.png`;
+      return iconPath(this.get("value"));
     }
   }),
 
