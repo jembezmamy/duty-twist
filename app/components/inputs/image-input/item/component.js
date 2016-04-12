@@ -15,4 +15,4 @@ export default Ember.Component.extend({
   click() {
     this.sendAction("action", this.get("value"));
   }
-})
+});

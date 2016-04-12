@@ -3,10 +3,10 @@ import Ember from "ember";
 export default Ember.Component.extend({
   actions: {
     previous() {
-      this.get("on").send("previous")
+      this.get("on").send("previous");
     },
     next() {
-      this.get("on").send("next")
+      this.get("on").send("next");
     }
   },
 
