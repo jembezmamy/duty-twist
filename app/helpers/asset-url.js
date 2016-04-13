@@ -13,7 +13,7 @@ export function assetUrl(name) {
   if (typeof name !== "string") {
     name = name[0];
   }
-  let regexp = new RegExp(name.replace(/(\.[^.]+)$/, "[^-.]*$1"));
+  let regexp = new RegExp(name.replace(/(\.[^.]+)$/, "(-[^.]+)*$1"));
   for (var i = 0; i < assets.length; i++) {
     if (regexp.exec(assets[i])) {
       return assets[i];
