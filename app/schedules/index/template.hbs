@@ -10,8 +10,10 @@
 
 <ul class="module size-1 schedule-index-list">
   {{#each model as |schedule|}}
-    <li>
-      {{schedule-summary model=schedule show="show"}}
+    <li class="row without-margin space-below">
+      <div class="column size-12">
+        {{schedule-summary model=schedule show="show"}}
+      </div>
     </li>
   {{/each}}
 </ul>

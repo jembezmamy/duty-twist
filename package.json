@@ -41,7 +41,7 @@
     "ember-i18n": "4.2.0",
     "ember-simple-form": "git://github.com/nibynic/ember-simple-form.git",
     "ember-validations": "2.0.0-alpha.4",
-    "emberfire": "firebase/emberfire",
+    "emberfire": "firebase/emberfire#c4f45154c388b81ea4bbaf1d6b31b701c0050f3d",
     "ember-cli-github-pages": "0.0.8"
   }
 }
