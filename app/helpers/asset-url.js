@@ -6,7 +6,8 @@ var assets = [
   "/assets/images/illustrations/bathroom.jpg",
   "/assets/images/illustrations/hall.jpg",
   "/assets/images/illustrations/kitchen.jpg",
-  "/assets/images/illustrations/trash.jpg"
+  "/assets/images/illustrations/trash.jpg",
+  "/assets/images/logo.svg"
 ];
 
 export function assetUrl(name) {
