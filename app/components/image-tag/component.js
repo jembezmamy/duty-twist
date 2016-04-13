@@ -1,5 +1,5 @@
 import Ember from "ember";
-import config from "duty-twist/config/environment";
+import {assetUrl} from "duty-twist/helpers/asset-url";
 
 export default Ember.Component.extend({
   tagName: "img",
@@ -10,7 +10,7 @@ export default Ember.Component.extend({
 
   normalizedSrc: Ember.computed("src", {
     get() {
-      var src = config.assetHost + "assets/images/" + this.get("src");
+      var src = assetUrl("/assets/images/" + this.get("src"));
       if (Modernizr.svgasimg) {
         return src;
       } else {
