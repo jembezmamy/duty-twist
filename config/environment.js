@@ -11,6 +11,7 @@ module.exports = function(environment) {
     },
     firebase: 'https://shining-heat-2164.firebaseio.com/',
     baseURL: '/',
+    assetHost: "/",
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
