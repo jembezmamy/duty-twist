@@ -49,7 +49,7 @@ export default {
     },
     index: {
       createNew: "Create schedule",
-      join: "Join schedule"
+      join: "Join schedule",
     },
     join: {
       title: "Join schedule",
@@ -61,6 +61,14 @@ export default {
     },
     show: {
       edit: "Edit",
+      share: "Share",
+      index: {
+        share: {
+          title: "Share this schedule",
+          url: "By URL",
+          id: "By ID"
+        }
+      },
       person: {
         back: "Back",
         assignment: {

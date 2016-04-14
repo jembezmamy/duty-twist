@@ -14,6 +14,9 @@ Router.map(function() {
       this.route("person", {path: "/:person_token"}, function() {
         this.route("assignment", {path: "/:round_number"});
       });
+      this.route("index", {path: "/"}, function() {
+        this.route("share");
+      });
     });
   });
 });

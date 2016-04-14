@@ -1,0 +1,16 @@
+<div class="popup-layout-background"></div>
+<div class="module popup-layout-container size-1">
+  <div class="card">
+    <div class="row vertical-center space-below space-above">
+      <div class="column grow">
+        <h1 class="header-1">{{title}}</h1>
+      </div>
+      <div class="column shrink">
+        {{#basic-button action="goBack" class="big transparent icon-only"}}
+          <i class="icon cross-small-grey"></i>
+        {{/basic-button}}
+      </div>
+    </div>
+    {{yield}}
+  </div>
+</div>

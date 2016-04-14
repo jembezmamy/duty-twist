@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="240px" height="24px" viewBox="0 0 240 24" style="enable-background:new 0 0 240 24;" xml:space="preserve">
+	 width="288.001px" height="24px" viewBox="0 0 288.001 24" style="enable-background:new 0 0 288.001 24;" xml:space="preserve">
 <g>
 	<line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" x1="3" y1="12" x2="21" y2="12"/>
 	<polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" points="11.001,20 3.001,12 11.001,4 	"/>
@@ -32,6 +32,16 @@
 <polyline style="fill:none;stroke:#909AA5;stroke-width:2;stroke-miterlimit:10;" points="201.5,7 206.5,12 201.5,17 "/>
 <circle style="fill:none;stroke:#FFFFFF;stroke-width:2.2857;stroke-miterlimit:10;" cx="230" cy="10" r="4"/>
 <line style="fill:none;stroke:#FFFFFF;stroke-width:2.2857;stroke-miterlimit:10;" x1="227.299" y1="12.702" x2="222.701" y2="17.299"/>
+<polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	256,8 247,12 256,16 "/>
+<circle style="fill:#FFFFFF;" cx="247" cy="12" r="2.5"/>
+<circle style="fill:#FFFFFF;" cx="256" cy="8" r="2.5"/>
+<circle style="fill:#FFFFFF;" cx="256" cy="16" r="2.5"/>
+<polyline style="fill:none;stroke:#909AA5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	280,8 271,12 280,16 "/>
+<circle style="fill:#909AA5;" cx="271" cy="12" r="2.5"/>
+<circle style="fill:#909AA5;" cx="280" cy="8" r="2.5"/>
+<circle style="fill:#909AA5;" cx="280" cy="16" r="2.5"/>
 <g>
 </g>
 <g>

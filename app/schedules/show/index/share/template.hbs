@@ -1,0 +1,10 @@
+{{#popup-layout title=(t "schedules.show.index.share.title") goBack="goBack"}}
+  <div class="row space-below space-above-all">
+    <div class="column size-12">
+      {{input-on this "url" builder=this object=this label=(t "schedules.show.index.share.url") readonly=true selectOnClick=true}}
+    </div>
+    <div class="column size-12">
+      {{input-on this "model.id" builder=this object=this label=(t "schedules.show.index.share.id") readonly=true selectOnClick=true}}
+    </div>
+  </div>
+{{/popup-layout}}

@@ -1,8 +1,11 @@
 {{#app-layout title=model.name goBack="goBack" as |layout|}}
 
   {{app-layout/action on=layout action="edit" title=(t "schedules.show.edit") icon="pencil"}}
+  {{app-layout/action on=layout action="share" title=(t "schedules.show.share") icon="share"}}
 
   {{#app-layout/content on=layout}}
     {{schedule-table people=model.people rounds=rounds currentRoundNumber=today.round.number}}
+
+    {{outlet}}
   {{/app-layout/content}}
 {{/app-layout}}

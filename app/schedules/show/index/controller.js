@@ -12,6 +12,10 @@ export default Ember.Controller.extend({
 
     edit() {
       this.transitionToRoute("schedules.edit", this.get("model"));
+    },
+
+    share() {
+      this.transitionToRoute("schedules.show.index.share", this.get("model"));
     }
   },
 
