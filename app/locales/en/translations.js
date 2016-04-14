@@ -51,6 +51,11 @@ export default {
       createNew: "Create schedule",
       join: "Join schedule"
     },
+    join: {
+      title: "Join schedule",
+      findByToken: "Type in schedule ID",
+      notFound: "Schedule with this ID doesn’t exist"
+    },
     new: {
       title: "New schedule"
     },

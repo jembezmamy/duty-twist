@@ -1,0 +1,20 @@
+{{#app-layout title=(t "schedules.join.title") goBack="goBack" as |layout|}}
+
+  {{#app-layout/content class="size-2" on=layout}}
+    {{#simple-form for=this as |f|}}
+      <div class="row vertical-center nowrap space-above space-below">
+        <div class="column grow">
+          {{input-on f "token" label=(t "schedules.join.findByToken") disabled=isLoading}}
+        </div>
+        <div class="column shrink">
+          {{#basic-button action="findByToken" type="submit" class="icon-only primary" disabled=buttonIsDisabled}}
+            <i class="icon loupe"></i>
+          {{/basic-button}}
+        </div>
+      </div>
+
+    {{/simple-form}}
+
+  {{/app-layout/content}}
+
+{{/app-layout}}
