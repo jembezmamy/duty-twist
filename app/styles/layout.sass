@@ -25,16 +25,18 @@ $narrow-gutter: 8px
     float: left
     padding-right: $gutter
     box-sizing: border-box
+    overflow: hidden
     @for $i from 1 through 12
       &.size-#{$i}
         width: 100% * $i / 12
         flex-grow: $i
     &.grow
       flex-grow: 12
-      flex-shrink: 0
+      flex-shrink: 12
     &.shrink
       flex-shrink: 12
       flex-grow: 0
+      max-width: max-content
 
   &.space-below > .column
     padding-bottom: 24px
