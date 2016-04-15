@@ -1,29 +1,31 @@
-<div class="schedules-index-splash">
-  <h1 class="schedules-index-logo">
-    {{image-tag src="logo.svg" alt=(t "app.title")}}
-  </h1>
-  <h2 class="schedules-index-slogan">
-    {{t "app.slogan"}}
-  </h2>
+<div class="schedules-index-view {{unless model.length 'is-empty'}}">
+  <div class="schedules-index-splash">
+    <h1 class="schedules-index-logo">
+      {{image-tag src="logo.svg" alt=(t "app.title")}}
+    </h1>
+    <h2 class="schedules-index-slogan">
+      {{t "app.slogan"}}
+    </h2>
+  </div>
+
+
+  <ul class="module size-1 schedule-index-list">
+    {{#each model as |schedule|}}
+      <li class="row without-margin space-below">
+        <div class="column size-12">
+          {{schedule-summary model=schedule show="show"}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+
+  <nav class="schedules-index-actions">
+    {{#link-button "schedules.join" class="big negative"}}
+      {{t "schedules.index.join"}}
+    {{/link-button}}
+
+    {{#link-button "schedules.new" class="big primary"}}
+      {{t "schedules.index.createNew"}}
+    {{/link-button}}
+  </nav>
 </div>
-
-
-<ul class="module size-1 schedule-index-list">
-  {{#each model as |schedule|}}
-    <li class="row without-margin space-below">
-      <div class="column size-12">
-        {{schedule-summary model=schedule show="show"}}
-      </div>
-    </li>
-  {{/each}}
-</ul>
-
-<nav class="schedules-index-actions">
-  {{#link-button "schedules.join" class="big negative"}}
-    {{t "schedules.index.join"}}
-  {{/link-button}}
-
-  {{#link-button "schedules.new" class="big primary"}}
-    {{t "schedules.index.createNew"}}
-  {{/link-button}}
-</nav>

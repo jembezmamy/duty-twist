@@ -1,2 +1,8 @@
 .schedule-summary
   cursor: pointer
+  min-height: 68px
+  transition: opacity 500ms ease-in-out
+  transition-property: opacity, box-shadow
+  &.is-loading
+    opacity: 0.1
+    box-shadow: none
