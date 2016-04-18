@@ -1,9 +1,5 @@
 <th class="data-table-secondary-header">
-  {{#if label}}
-    {{label}}
-  {{else}}
-    {{round-date model.startsOn clock.dayDate}}
-  {{/if}}
+  {{round-date model.startsOn clock.dayDate relativeRoundNumber=relativeRoundNumber}}
 </th>
 {{#each model.assignments as |assignment|}}
   <td>

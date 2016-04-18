@@ -12,12 +12,13 @@ export default {
       person: {
         remove: "Remove person"
       }
-    },
-    scheduleTable: {
-      round: {
-        current: "Today",
-        previous: "Previously"
-      }
+    }
+  },
+
+  helpers: {
+    roundDate: {
+      current: "today",
+      previous: "previously"
     }
   },
 

@@ -19,15 +19,9 @@ export default Ember.Component.extend({
     }
   }),
 
-  label: Ember.computed("currentRoundNumber", "model.number", "i18n.locale", {
+  relativeRoundNumber: Ember.computed("currentRoundNumber", "model.number", {
     get() {
-      var number = this.get("model.number");
-      var currentNumber = this.get("currentRoundNumber");
-      if (number === currentNumber) {
-        return this.get("i18n").t("components.scheduleTable.round.current");
-      } else if (number === currentNumber - 1) {
-        return this.get("i18n").t("components.scheduleTable.round.previous");
-      }
+      return this.get("model.number") - this.get("currentRoundNumber");
     }
   })
 });
