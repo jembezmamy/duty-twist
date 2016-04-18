@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
 
   rounds: Ember.computed("model.rounds", "today.round.number", {
     get() {
-      let i0 = Math.max(0, this.get("today.round.number") - 1);
+      let i0 = this.get("today.round.number") - 1;
       return Ember.Object.extend(Ember.Array).create({
         content: this.get("model.rounds"),
         length: 10,

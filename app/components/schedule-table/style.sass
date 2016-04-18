@@ -1,3 +1,14 @@
 .schedule-table-duty-icon
   width: 30px
   height: 30px
+
+.schedule-table
+  tr.is-previous .schedule-table-assignment img
+    transform: scale(0.8)
+    opacity: 0.8
+  tr.is-current
+    th, td
+      background-color: $light-yellow
+    th
+      color: black
+      font-size: 12px
