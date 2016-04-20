@@ -8,10 +8,14 @@ function cachingProxy(buildId) {
         resolve(this.setResponseCache(cacheId, response));
       }, (error) => {
         let response = this.getResponseCache(cacheId);
-        response ? resolve(response) : reject(error);
+        if (response) {
+          resolve(response);
+        } else {
+          reject(error);
+        }
       });
     });
-  }
+  };
 }
 
 export default Ember.Mixin.create({

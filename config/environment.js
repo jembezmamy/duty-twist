@@ -56,5 +56,9 @@ module.exports = function(environment) {
     ENV.assetHost = '/duty-twist/';
   }
 
+  ENV.serviceWorker = {
+    includeRegistration: false
+  };
+
   return ENV;
 };
