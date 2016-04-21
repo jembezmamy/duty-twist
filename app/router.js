@@ -19,6 +19,7 @@ Router.map(function() {
       });
     });
   });
+  this.route("app-launch");
 });
 
 export default Router;

@@ -21,7 +21,12 @@ module.exports = function(defaults) {
     fingerprint: {
       enabled: isProductionLikeBuild,
       extensions: ["js", "css", "png", "jpg", "gif", "map", "svg"],
-      prepend: config.assetHost
+      prepend: config.assetHost,
+      exclude: [
+        'android-icon',
+        'apple-touch-icon',
+        'favicon'
+      ]
     }
   });
 

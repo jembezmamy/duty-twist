@@ -60,5 +60,7 @@ module.exports = function(environment) {
     includeRegistration: false
   };
 
+  ENV.forceHttps = environment === 'production';
+
   return ENV;
 };
