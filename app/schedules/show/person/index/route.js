@@ -12,5 +12,8 @@ export default AssignmentRoute.extend({
     });
     var i = today.get("round.number");
     return this.modelFor("schedules.show.person").get("assignments").objectAt(i);
+  },
+
+  afterModel() {
   }
 });
