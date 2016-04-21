@@ -23,6 +23,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "#/app-launch",
+  "start_url": "./#/app-launch",
   "display": "standalone"
 }
