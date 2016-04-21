@@ -57,7 +57,9 @@ module.exports = function(environment) {
   }
 
   ENV.serviceWorker = {
-    includeRegistration: false
+    enabled: environment === 'production',
+    includeRegistration: false,
+    skipWaiting: true
   };
 
   ENV.forceHttps = environment === 'production';
