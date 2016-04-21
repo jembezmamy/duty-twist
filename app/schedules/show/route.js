@@ -9,5 +9,6 @@ export default Ember.Route.extend({
       ids.push(model.get("id"));
     }
     this.set("localStorage.localSheduleIds", ids);
+    this.set("localStorage.lastScheduleId", model.get("id"));
   }
 });
