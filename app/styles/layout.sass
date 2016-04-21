@@ -30,6 +30,9 @@ $narrow-gutter: 8px
       &.size-#{$i}
         width: 100% * $i / 12
         flex-grow: $i
+    @for $i from 1 through 5
+      &.min-#{$i*50}
+        min-width: $i * 50px
     &.grow
       flex-grow: 12
       flex-shrink: 12

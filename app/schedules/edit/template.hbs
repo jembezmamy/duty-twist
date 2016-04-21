@@ -4,16 +4,16 @@
 
     {{#simple-form for=this action="submit" as |f|}}
       <div class="row space-below-all space-above-all">
-        <div class="column size-6">
+        <div class="column size-6 min-200">
           {{input-on f "name" class="big"}}
         </div>
         <div class="column size-6"></div>
       </div>
       <div class="row space-below">
-        <div class="column size-6">
+        <div class="column size-6 min-200">
           {{input-on f "startsOn"}}
         </div>
-        <div class="column size-6">
+        <div class="column size-6 min-200">
           <div class="row narrow without-margin">
             <div class="column size-6">
               {{input-on f "interval"}}
