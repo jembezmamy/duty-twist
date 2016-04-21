@@ -23,7 +23,7 @@ export default Ember.Component.extend(EmberValidations, {
   },
 
   updateToken: Ember.observer("name", function() {
-    var base = removeDiacritics(this.get("name")).toLowerCase().replace(/[^a-z]+/, "-");
+    var base = removeDiacritics(this.get("name")).toLowerCase().replace(/[^a-z]+/g, "-");
     var token = base;
     var i = 1;
     var otherPeople = this.get("model.schedule.people").without(this.get("model"));
