@@ -1,9 +1,15 @@
-import Ember from 'ember';
-import FirebaseAdapter from 'emberfire/adapters/firebase';
+import DS from 'ember-data';
 import LocalStorageFallback from "duty-twist/mixins/local-storage-fallback";
+import config from 'duty-twist/config/environment';
 
-const { inject } = Ember;
+export default DS.RESTAdapter.extend(LocalStorageFallback, {
+  host: config.backendless.host,
+  namespace: config.backendless.namespace,
 
-export default FirebaseAdapter.extend(LocalStorageFallback, {
-  firebase: inject.service(),
+  headers: {
+    "application-id": config.backendless.applicationId,
+    "secret-key": config.backendless.secretKey,
+    "application-type": "REST",
+    "Content-Type": "application/json"
+  }
 });

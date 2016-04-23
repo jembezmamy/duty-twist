@@ -37,15 +37,22 @@ export default Ember.Controller.extend(EmberValidations, {
     },
 
     submit() {
-      var promises = [];
-      promises.pushObjects(this.get("model.people").filterBy("_destroy", true).invoke("destroyRecord"));
-      // promises.pushObjects(this.get("model.people").filterBy("_destroy", false).invoke("save"));
-      promises.pushObjects(this.get("model.duties").filterBy("_destroy", true).invoke("destroyRecord"));
-      // promises.pushObjects(this.get("model.duties").filterBy("_destroy", false).invoke("save"));
-      var model = this.get("model");
+      let model = this.get("model");
       let self = this;
+      let promises = [];
+      if (!model.get("token")) {
+        promises.push(this.generateToken().then(function(token) {
+          model.set("token", token);
+        }));
+      }
+      promises.pushObjects(this.get("model.people").filterBy("_destroy", true).invoke("destroyRecord"));
+      promises.pushObjects(this.get("model.duties").filterBy("_destroy", true).invoke("destroyRecord"));
       Ember.RSVP.all(promises).then(function() {
         model.save().then(function() {
+          // clean up after embedded records save
+          model.get("people").filterBy("isNew").invoke("destroyRecord");
+          model.get("duties").filterBy("isNew").invoke("destroyRecord");
+          
           self.transitionToRoute("schedules.show", self.get("model"));
         });
       });
@@ -74,7 +81,26 @@ export default Ember.Controller.extend(EmberValidations, {
         return Option.create({id: value, context: context});
       });
     }
-  })
+  }),
+
+  generateToken() {
+    let token = "";
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for ( var i=0; i < 4 + Math.floor(Math.random() * 5); i++ ) {
+      token += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
+    let self = this;
+    return this.get("store").query("schedule", {
+      where: `token = '${token}'`
+    }).then(function(results) {
+      if (results.get("length") > 0) {
+        return self.generateToken();
+      } else {
+        return token;
+      }
+    });
+  }
 });
 
 Option = Ember.Object.extend({

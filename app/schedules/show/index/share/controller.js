@@ -8,10 +8,10 @@ export default Ember.Controller.extend({
     }
   },
 
-  url: Ember.computed("model.id", {
+  url: Ember.computed("model.token", {
     get() {
       return window.location.protocol + "//" +
-        window.location.host + "/" + this.get("model.id");
+        window.location.host + "/" + this.get("model.token");
     }
   })
 });

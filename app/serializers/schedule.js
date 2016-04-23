@@ -1,8 +1,10 @@
-import FirebaseSerializer from 'emberfire/serializers/firebase';
+import DS from 'ember-data';
+import ApplicationSerializer from "./application";
 
-export default FirebaseSerializer.extend({
+export default ApplicationSerializer.extend(DS.EmbeddedRecordsMixin, {
   attrs: {
     people: { embedded: 'always' },
-    duties: { embedded: 'always' }
+    duties: { embedded: 'always' },
+    interval: "intervalTime"
   }
 });

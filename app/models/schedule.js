@@ -1,14 +1,10 @@
 import DS from 'ember-data';
-import moment from "moment";
 import Round from "./round";
 
 export default DS.Model.extend({
+  token:        DS.attr("string"),
   name:         DS.attr("string"),
-  startsOn:     DS.attr('date', {
-    defaultValue() {
-      return moment().startOf("week");
-    }
-  }),
+  startsOn:     DS.attr('date'),
   interval:     DS.attr('number', { defaultValue: 1 }),
   intervalUnit: DS.attr("string", { defaultValue: "week" }),
 

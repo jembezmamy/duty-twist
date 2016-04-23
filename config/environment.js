@@ -5,11 +5,16 @@ module.exports = function(environment) {
     modulePrefix: 'duty-twist',
     environment: environment,
     contentSecurityPolicy: {
-      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com https://*.firebaseio.com",
+      'connect-src': "'self' api.backendless.com",
       'style-src': "'self' data: fonts.googleapis.com 'unsafe-inline'",
       'font-src': "'self' data: fonts.gstatic.com",
     },
-    firebase: 'https://shining-heat-2164.firebaseio.com/',
+    backendless: {
+      applicationId: "A45F23CD-607E-BEFA-FF52-7E23D2D61300",
+      secretKey: "00DD5751-3B66-11CF-FF10-8CDB468AC800",
+      host: "https://api.backendless.com",
+      namespace: "v1/data"
+    },
     baseURL: '/',
     assetHost: "/",
     locationType: 'auto',

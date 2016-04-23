@@ -58,7 +58,8 @@ export default {
       notFound: "Schedule with this ID doesn’t exist"
     },
     new: {
-      title: "New schedule"
+      title: "New schedule",
+      defaultName: "Our chores"
     },
     show: {
       edit: "Edit",

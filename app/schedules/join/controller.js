@@ -14,17 +14,19 @@ export default Ember.Controller.extend({
 
     findByToken() {
       this.set("isLoading", true);
-      this.get("store").findRecord("schedule", this.get("token")).then((schedule) => {
+      this.get("store").query("schedule", {
+        where: `token = '${this.get("token")}'`
+      }).then((schedules) => {
         this.set("isLoading", false);
-        this.set("token", null);
-        this.transitionToRoute("schedules.show", schedule);
-      }, () => {
-        this.set("errors", {
-          token: [this.get("i18n").t("schedules.join.notFound")]
-        });
-        this.set("isLoading", false);
+        if (schedules.get("length") > 0) {
+          this.set("token", null);
+          this.transitionToRoute("schedules.show", schedules.objectAt(0));
+        } else {
+          this.set("errors", {
+            token: [this.get("i18n").t("schedules.join.notFound")]
+          });
+        }
       });
-
     }
   },
 
