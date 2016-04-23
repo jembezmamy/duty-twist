@@ -6,12 +6,17 @@ export default Ember.Route.extend({
   beforeModel() {
     let scheduleId = this.get("localStorage.lastScheduleId");
     if (Ember.isPresent(scheduleId)) {
-      let personId = this.get("localStorage.lastPersonId");
-      if (Ember.isPresent(personId)) {
-        this.transitionTo("schedules.show.person", scheduleId, personId);
-      } else {
-        this.transitionTo("schedules.show", scheduleId);
-      }
+      this.get("store").find("schedule", scheduleId).then((schedule) => {
+        let personId = this.get("localStorage.lastPersonId");
+        console.log(personId);
+        if (Ember.isPresent(personId)) {
+          this.transitionTo("schedules.show.person", schedule, personId);
+        } else {
+          this.transitionTo("schedules.show", schedule);
+        }
+      }, () => {
+        this.transitionTo("schedules.index");
+      });
     } else {
       this.transitionTo("schedules.index");
     }
