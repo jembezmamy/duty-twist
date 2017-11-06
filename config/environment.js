@@ -10,10 +10,10 @@ module.exports = function(environment) {
       'font-src': "'self' data: fonts.gstatic.com",
     },
     backendless: {
-      applicationId: "A45F23CD-607E-BEFA-FF52-7E23D2D61300",
-      secretKey: "00DD5751-3B66-11CF-FF10-8CDB468AC800",
+      applicationId: "C7AF8B47-03A3-1504-FFBE-8D608CB96500",
+      apiKey: "00DD5751-3B66-11CF-FF10-8CDB468AC800",
       host: "https://api.backendless.com",
-      namespace: "v1/data"
+      namespace: "data"
     },
     baseURL: '/',
     assetHost: "/",
